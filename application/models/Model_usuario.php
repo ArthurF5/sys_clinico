@@ -1,4 +1,4 @@
-<?php
+ <?php
 class Model_usuario extends CI_Model {
 	public function __construct()
 	{

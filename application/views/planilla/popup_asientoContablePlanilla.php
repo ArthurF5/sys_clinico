@@ -42,7 +42,7 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="ac">
 						<div class="rTable table-bordered m-n" cellspacing="0">
-							<div class="rTableHeading" style="background-color: #00bcd4; color: white">
+							<div class="rTableHeading" style="background-color: #00acc1; color: white">
 								<div class="rTableRow">
 									<div class="rTableHead" style="text-align: center;width: 100px;">Cuenta Contable</div>
 									<div class="rTableHead" style="text-align: center;width: 580px;">Descripción</div>

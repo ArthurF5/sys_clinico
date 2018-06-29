@@ -5,7 +5,7 @@
        <body onload="window.print()"> 
               <div class="imp_doc">
               <h2>CERTIFICADO DE INCAPACIDAD TEMPORAL PARA EL TRABAJO</h2>
-              <p>EE.SS: VILLA SALUD - VILLA EL SALVADOR</p>
+              <p>EE.SS: CONFIAF - PERÚ</p>
               <p><b>Acto Médico:</b>  {{fData.num_acto_medico}} </p>
               <p><b>Especialidad:</b>  {{fData.especialidad}} </p>
               <hr/>

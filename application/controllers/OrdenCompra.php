@@ -748,7 +748,7 @@ class OrdenCompra extends CI_Controller {
     	$this->load->library('My_PHPMailer');
 		$hoydate = date("Y-m-d H:i:s");
 		date_default_timezone_set('UTC');
-		define('SMTP_HOST','mail.villasalud.pe');
+		define('SMTP_HOST','mail.confiaf.com');
 
 		define('SMTP_PORT',25);
 		define('SMTP_USERNAME',$fLogistica['mail_1']);
@@ -765,7 +765,7 @@ class OrdenCompra extends CI_Controller {
 		$mail->Password = SMTP_PASSWORD;
 		$mail->SetFrom(SMTP_USERNAME,$setFromAleas);
 		$mail->AddReplyTo(SMTP_USERNAME,$setFromAleas);
-		$mail->Subject = 'ENVÍO DE ORDEN DE COMPRA APROBADA - VILLA SALUD';
+		$mail->Subject = 'ENVÍO DE ORDEN DE COMPRA APROBADA - CONFIAF';
 
 		$cuerpo = '<html> 
 			<head>
@@ -773,7 +773,7 @@ class OrdenCompra extends CI_Controller {
 			</head>
 			<body style="font-family: sans-serif;padding: 10px 40px;" > 
 			<div style="text-align: right;">
-				<img style="width: 160px;" alt="Hospital Villa Salud" src="'.base_url('assets/img/dinamic/empresa/'.$arrConfig['nombre_logo']).'">
+				<img style="width: 160px;" alt="Confiaf" src="'.base_url('assets/img/dinamic/empresa/'.$arrConfig['nombre_logo']).'">
 			</div> <br />';
 		$cuerpo .= '<div style="font-size:16px;">  
 				Estimado: <br /> <br /> 
@@ -963,7 +963,7 @@ class OrdenCompra extends CI_Controller {
 	    	$this->load->library('My_PHPMailer');
 			$hoydate = date("Y-m-d H:i:s");
 			date_default_timezone_set('UTC');
-			define('SMTP_HOST','mail.villasalud.pe');
+			define('SMTP_HOST','mail.confiaf.com');
 
 			define('SMTP_PORT',25);
 			define('SMTP_USERNAME',$mailDeArea);
@@ -987,7 +987,7 @@ class OrdenCompra extends CI_Controller {
 				</head>
 				<body style="font-family: sans-serif;padding: 10px 40px;" > 
 				<div style="text-align: right;">
-					<img style="width: 160px;" alt="Hospital Villa Salud" src="'.base_url('assets/img/dinamic/empresa/'.$arrConfig['nombre_logo']).'">
+					<img style="width: 160px;" alt="Confiaf" src="'.base_url('assets/img/dinamic/empresa/'.$arrConfig['nombre_logo']).'">
 				</div> <br />';
 			
 			// $cuerpo .='</tbody> </table>';

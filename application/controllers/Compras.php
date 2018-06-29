@@ -590,7 +590,7 @@ class Compras extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),
 	      'alignment' => array(
@@ -621,7 +621,7 @@ class Compras extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),	      
 	      'font'=>  array(

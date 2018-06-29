@@ -3752,7 +3752,7 @@ class CentralReportesFarmacia extends CI_Controller {
     //force user to download the Excel file without writing it to server's HD 
     $dateTime = date('YmdHis');
     $pedido = 'pedido-' . $allInputs['hasta'] .'-'. $allInputs['hastaHora'] . $allInputs['hastaMinuto'];
-    $pedido = 'villasalud';
+    $pedido = 'confiaf';
     // $objWriter->save('assets/img/dinamic/excelTemporales/tempEXCEL_'.$dateTime.'.xls'); 
     $objWriter->save('assets/img/dinamic/excelTemporales/'.$pedido.'.xls'); 
     $arrData = array(

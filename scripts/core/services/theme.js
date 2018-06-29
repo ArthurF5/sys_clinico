@@ -25,8 +25,8 @@ angular
       'primary':      '#03a9f4',
       'success':      '#8bc34a',
       'warning':      '#ffc107',
-      'danger':       '#e51c23',
-      'info':         '#00bcd4',
+      'danger':       '#3f4079',
+      'info':         '#00acc1',
       
       'brown':        '#795548',
       'indigo':       '#3f51b5',

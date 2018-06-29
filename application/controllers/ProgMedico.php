@@ -2799,7 +2799,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),
 	      'alignment' => array(
@@ -2831,7 +2831,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),	      
 	      'font'=>  array(
@@ -3002,7 +3002,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),
 	      'alignment' => array(
@@ -3033,7 +3033,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),	      
 	      'font'=>  array(
@@ -3229,25 +3229,29 @@ class ProgMedico extends CI_Controller {
 	    $this->load->library('My_PHPMailer');
 	    $hoydate = date("Y-m-d H:i:s");
 	    date_default_timezone_set('UTC');
-	    define('SMTP_HOST','mail.villasalud.pe');
-	    $correo = 'sistemas.ti@villasalud.pe';
-	    $pass = 'franzsheskoli';
+	    define('SMTP_HOST','email-smtp.us-east-1.amazonaws.com');
 	    $setFromAleas = 'Dirección Médica';
 
 	    define('SMTP_PORT',25);
-	    define('SMTP_USERNAME',$correo);
-	    define('SMTP_PASSWORD',$pass);
+	    define('SMTP_USERNAME','AKIAIIOAKWTMF22Y2VGQ');
+	    define('SMTP_PASSWORD','AifsKW2FSe4O5TyAeCyhnj3CFz2FTAPZmBqEmol2U/du'); 
+
+	    
+	    
+
+
+
 	    
 	    $mail = new PHPMailer();
 	    $mail->IsSMTP(true);
-	    //$mail->SMTPDebug = 2;
+	    $mail->SMTPDebug = 1;
 	    $mail->SMTPAuth = true;
 	    $mail->SMTPSecure = "tls";
 	    $mail->Host = SMTP_HOST;
 	    $mail->Port = SMTP_PORT;
 	    $mail->Username =  SMTP_USERNAME;
 	    $mail->Password = SMTP_PASSWORD;
-	    $mail->SetFrom(SMTP_USERNAME,$setFromAleas);
+	    $mail->SetFrom('ernesto.mogrovejo@gmail.com',$setFromAleas); 
 	    $mail->AddReplyTo(SMTP_USERNAME,$setFromAleas);
 
 	    if($tipo == 1)
@@ -3263,7 +3267,7 @@ class ProgMedico extends CI_Controller {
 		      </head>
 		      <body style="font-family: sans-serif;padding: 10px 40px;" > 
 		      <div style="text-align: right;">
-		        <img style="width: 160px;" alt="Hospital Villa Salud" src="'.base_url('assets/img/dinamic/empresa/gm_small.png').'">
+		        <img style="width: 160px;" alt="Confiaf" src="'.base_url('assets/img/dinamic/empresa/gm_small.png').'">
 		      </div> <br />';
 		$cuerpo .= '<div style="font-size:16px;">  
 		        Estimado Dr(a).: '. $arrProgMed[0]['medico'].' <br /> <br /> ';
@@ -3292,9 +3296,10 @@ class ProgMedico extends CI_Controller {
 	    $mail->AltBody = $cuerpo;
 	    $mail->MsgHTML($cuerpo);
 	    $correoMedico = $this->model_empleado->m_get_correo_medico($arrProgMed[0])[0]['correo_electronico']; //consulta correo
+	    //print_r($correoMedico); 
 	    $mail->CharSet = 'UTF-8';
-	    // $mail->AddBCC("ymartinez@villasalud.pe");
-	    // $mail->AddBCC("rluna@villasalud.pe");
+	    // $mail->AddBCC("ymartinez@confiaf.com");
+	    // $mail->AddBCC("rluna@confiaf.com");
 
 	    if($correoMedico != null && $correoMedico != ''){
 	    	if(comprobar_email($correoMedico)){
@@ -3683,7 +3688,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),
 	      'alignment' => array(
@@ -3738,7 +3743,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),	      
 	      'font'=>  array(
@@ -3759,7 +3764,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),	      
 	      'font'=>  array(
@@ -3805,7 +3810,7 @@ class ProgMedico extends CI_Controller {
 	    	}else if(strtoupper($value) == 'REPROGRAMADO' ){
 	    		$color = '757575';
 	    	}else if(strtoupper($value) == 'ATENDIDO' ){
-	    		$color = '00bcd4';
+	    		$color = '00acc1';
 	    	}else if(strtoupper($value) == 'DISPONIBLE' ){
 	    		$color = 'C6EFCE';
 	    	}else if(strtoupper($value) == 'RESERVADO' ){
@@ -3887,7 +3892,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),
 	      'alignment' => array(
@@ -3943,7 +3948,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),	      
 	      'font'=>  array(
@@ -3964,7 +3969,7 @@ class ProgMedico extends CI_Controller {
 	      'borders' => array(
 	        'allborders' => array( 
 	          'style' => PHPExcel_Style_Border::BORDER_THIN,
-	          'color' => array('rgb' => '00bcd4') 
+	          'color' => array('rgb' => '00acc1') 
 	        ) 
 	      ),	      
 	      'font'=>  array(
@@ -3998,7 +4003,7 @@ class ProgMedico extends CI_Controller {
 	    	$value = $this->excel->getActiveSheet()->getCell('F'.$i)->getValue();
 	
 	    	if(strtoupper($value) == 'ATENDIDO' ){
-	    		$color = '00bcd4';
+	    		$color = '00acc1';
 	    	}else if(strtoupper($value) == 'VENDIDO' ){
 	    		$color = '8bc34a';
 	    	}else{

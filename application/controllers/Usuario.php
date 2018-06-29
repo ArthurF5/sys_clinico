@@ -179,7 +179,7 @@ class Usuario extends CI_Controller {
 		    ->set_content_type('application/json')
 		    ->set_output(json_encode($arrData));*/
 	}
-	public function registrar()
+	public function registrar() // replica esta logica en tu formulario 
 	{
 		$allInputs = json_decode(trim($this->input->raw_input_stream),true);
 		// var_dump($allInputs); exit(); 

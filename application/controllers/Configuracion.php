@@ -83,72 +83,72 @@ class Configuracion extends CI_Controller {
 		}	
 		if( $this->sessionHospital['key_group'] == 'key_dir_far' || $this->sessionHospital['key_group'] == 'key_sistemas' ){
 			/* NOTIFICACIONES DE VENCIMIENTO DE MEDICAMENTO */
-			$listaVM = $this->model_medicamento_almacen->m_cargar_medicamento_almacen_por_vencer();
-			if( !empty($listaVM) ){
-				foreach ($listaVM as $key => $row) {
-					if( $row['estado_vencer'] == 1 ){
-						$string = 'Vencido';
-						$claseMed = 'danger';
-					}elseif( $row['estado_vencer'] == 2 ){
-						$string = 'Prox. a Vencer';
-						$claseMed = 'warning';
-					}elseif( $row['estado_vencer'] == 3 ){
-						$string = 'Prox. a Vencer';
-						$claseMed = 'info';
-					}
-					array_push($arrListado,
-						array(
-							'idmedicamento'=> $row['idmedicamento'],
-							'notificacion'=> '<b>MEDICAMENTO</b>: <b>'.strtoupper($row['denominacion']).'</b>',
-							'fecha'=> formatoFechaReporte3($row['fecha_vencimiento']),
-							'fecha_timestamp'=> strtotime($row['fecha_vencimiento']),
-							'string' => $string,
-							'clase'=> $claseMed, // 
-							'tipo_notif'=> 'VM', 
-							'icono'=> 'fa fa-medkit'
-						)
-					);
-				}
-			}
+			// $listaVM = $this->model_medicamento_almacen->m_cargar_medicamento_almacen_por_vencer();
+			// if( !empty($listaVM) ){
+			// 	foreach ($listaVM as $key => $row) {
+			// 		if( $row['estado_vencer'] == 1 ){
+			// 			$string = 'Vencido';
+			// 			$claseMed = 'danger';
+			// 		}elseif( $row['estado_vencer'] == 2 ){
+			// 			$string = 'Prox. a Vencer';
+			// 			$claseMed = 'warning';
+			// 		}elseif( $row['estado_vencer'] == 3 ){
+			// 			$string = 'Prox. a Vencer';
+			// 			$claseMed = 'info';
+			// 		}
+			// 		array_push($arrListado,
+			// 			array(
+			// 				'idmedicamento'=> $row['idmedicamento'],
+			// 				'notificacion'=> '<b>MEDICAMENTO</b>: <b>'.strtoupper($row['denominacion']).'</b>',
+			// 				'fecha'=> formatoFechaReporte3($row['fecha_vencimiento']),
+			// 				'fecha_timestamp'=> strtotime($row['fecha_vencimiento']),
+			// 				'string' => $string,
+			// 				'clase'=> $claseMed, // 
+			// 				'tipo_notif'=> 'VM', 
+			// 				'icono'=> 'fa fa-medkit'
+			// 			)
+			// 		);
+			// 	}
+			// }
 			/* NOTIFICACIONES DE STOCKS */
-			$listaSF = $this->model_medicamento_almacen->m_cargar_medicamento_almacen_por_agotarse();
-			if( !empty($listaSF) ){
-				foreach ($listaSF as $row) {
-					switch ($row['estado']) {
-						case 1:
-							$string = 'STOCK CRITICO';
-							$claseMed = 'info';
-							break;
-						case 2:
-							$string = 'STOCK MINIMO';
-							$claseMed = 'warning';
-							break;
-						case 3:
-							$string = 'STOCK AGOTADO';
-							$claseMed = 'danger';
-							break;
-						default:
-							break;
-					}
-					array_push($arrListado,
-						array(
+			// $listaSF = $this->model_medicamento_almacen->m_cargar_medicamento_almacen_por_agotarse();
+			// if( !empty($listaSF) ){
+			// 	foreach ($listaSF as $row) {
+			// 		switch ($row['estado']) {
+			// 			case 1:
+			// 				$string = 'STOCK CRITICO';
+			// 				$claseMed = 'info';
+			// 				break;
+			// 			case 2:
+			// 				$string = 'STOCK MINIMO';
+			// 				$claseMed = 'warning';
+			// 				break;
+			// 			case 3:
+			// 				$string = 'STOCK AGOTADO';
+			// 				$claseMed = 'danger';
+			// 				break;
+			// 			default:
+			// 				break;
+			// 		}
+			// 		array_push($arrListado,
+			// 			array(
 
-							'idmedicamentoalmacen' => $row['idmedicamentoalmacen'],
-							'idmedicamento' => $row['idmedicamento'],
-							'notificacion' => '<b>' . $string . '</b><br>' . $row['denominacion'],
-							'stock_minimo' => $row['stock_minimo'],
-							'stock_critico' => $row['stock_critico'],
-							'stock_maximo' => $row['stock_maximo'],
-							'stock_actual' => $row['stock_actual_malm'],
-							'string' => $string,
-							'clase' => $claseMed,
-							'tipo_notif'=> 'SF', 
-							'icono'=> 'fa fa-exclamation-triangle',
-							'fecha_timestamp'=> date('d-m-Y'),
-						)
-					);
-				}
-			}
+			// 				'idmedicamentoalmacen' => $row['idmedicamentoalmacen'],
+			// 				'idmedicamento' => $row['idmedicamento'],
+			// 				'notificacion' => '<b>' . $string . '</b><br>' . $row['denominacion'],
+			// 				'stock_minimo' => $row['stock_minimo'],
+			// 				'stock_critico' => $row['stock_critico'],
+			// 				'stock_maximo' => $row['stock_maximo'],
+			// 				'stock_actual' => $row['stock_actual_malm'],
+			// 				'string' => $string,
+			// 				'clase' => $claseMed,
+			// 				'tipo_notif'=> 'SF', 
+			// 				'icono'=> 'fa fa-exclamation-triangle',
+			// 				'fecha_timestamp'=> date('d-m-Y'),
+			// 			)
+			// 		);
+			// 	}
+			// }
 		}
 		/*function fnOrdering($a, $b) { 
 	    	return $b['fecha_timestamp'] - $a['fecha_timestamp'];

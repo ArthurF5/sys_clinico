@@ -69,7 +69,7 @@ class Model_empleado extends CI_Model {
 			}
 		}
 		if( $this->sessionHospital['agrega_horario_especial'] == 1){ // CARGO QUE PUEDE AGREGAR HORARIO ESPECIAL
-			if( $paramDatos['modulo'] == 'asist' ){
+			if( @$paramDatos['modulo'] == 'asist' ){
 				//$this->db->where('em.ruc_empresa',$this->sessionHospital['ruc_empresa_admin']); 
 				// -- $this->db->where('s.idsede',$this->sessionHospital['idsede']); 
 				$this->db->where('e.idsedeempleado',$this->sessionHospital['idsede']);
@@ -125,7 +125,7 @@ class Model_empleado extends CI_Model {
 			}
 		}
 		if( $this->sessionHospital['agrega_horario_especial'] == 1){ // CARGO QUE PUEDE AGREGAR HORARIO ESPECIAL
-			if( $paramDatos['modulo'] == 'asist' ){
+			if( @$paramDatos['modulo'] == 'asist' ){
 				//$this->db->where('em.ruc_empresa',$this->sessionHospital['ruc_empresa_admin']); 
 				// $this->db->where('s.idsede',$this->sessionHospital['idsede']); 
 				$this->db->where('e.idsedeempleado',$this->sessionHospital['idsede']);

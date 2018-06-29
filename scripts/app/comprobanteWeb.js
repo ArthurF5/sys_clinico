@@ -2,7 +2,7 @@ angular.module('theme.comprobanteWeb', ['theme.core.services'])
   .controller('comprobanteWebController', ['$scope', '$sce', '$uibModal', 'blockUI', '$bootbox', '$window', '$http', '$theme', '$log', '$timeout', 'uiGridConstants', 'pinesNotifications', 'hotkeys', 'comprobanteWebServices',  
     function($scope, $sce, $uibModal, blockUI, $bootbox, $window, $http, $theme, $log, $timeout, uiGridConstants, pinesNotifications, hotkeys, comprobanteWebServices ){
     'use strict';
-    $scope.dirComprobantes = 'https://citasenlinea.villasalud.pe/comprobantesWeb/';
+    $scope.dirComprobantes = 'http://confiaf/citasenlinea/comprobantesWeb/';
 
     $scope.listaEstado =[
       {estado_comprobante:2, descripcion:'POR EMITIR'},

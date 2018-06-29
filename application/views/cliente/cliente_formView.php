@@ -214,7 +214,7 @@
 						<span > Provincia de Lima: </span> <label class="label label-success m-n">01</label>
 					</div>
 					<div class="block">
-						<span > Distrito de Villa el Salvador: </span> <label class="label label-success m-n">42</label>
+						<span > Distrito de Chorrillos: </span> <label class="label label-success m-n">42</label>
 					</div>
 				</div>
 			</div>

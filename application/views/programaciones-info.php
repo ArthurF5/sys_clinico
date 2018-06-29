@@ -80,7 +80,7 @@
 						            <table class="table table-bordered mb-n" style="border-bottom: none;">
 						              <thead>
 						                <tr>       
-						                  	<td ng-repeat="hora in genCupo.planning.horas" class="{{hora.class}} {{hora.classHoveredHora}}" style="max-width: 61px; border-right: 1px solid #00BCD4;">
+						                  	<td ng-repeat="hora in genCupo.planning.horas" class="{{hora.class}} {{hora.classHoveredHora}}" style="max-width: 61px; border-right: 1px solid #00acc1;">
 							                    <div style="letter-spacing: -1px; font-size: 14px;">
 							                    	<span> {{hora.dato}} </span><br>
 							                    	<span> {{hora.dato_fin}} </span> 
@@ -100,10 +100,10 @@
 						                    	{{ambiente.dato}} 
 						                    </div>
 						                  </td>
-						                  <td style="width:62px; border: 1px solid #00BCD4;"
+						                  <td style="width:62px; border: 1px solid #00acc1;"
 						                  	ng-style="genCupo.planning.gridTotal2[0][1].CM != null && genCupo.planning.gridTotal2[0][1].P != null ? { 'height':'80px' } : { 'height': '60px' }">
 						                    <div style="font-size: 16px; width:62px; height:40px;" class="p-xs"
-						                    	ng-style="genCupo.planning.gridTotal2[0][1].CM != null && genCupo.planning.gridTotal2[0][1].P != null && { 'border-bottom':'1px solid #00BCD4' }"
+						                    	ng-style="genCupo.planning.gridTotal2[0][1].CM != null && genCupo.planning.gridTotal2[0][1].P != null && { 'border-bottom':'1px solid #00acc1' }"
 						                    	ng-if="genCupo.planning.gridTotal2[0][1].CM != null">
 						                    	CONS. 
 						                    </div>

@@ -350,10 +350,10 @@ class HistorialCajaChica extends CI_Controller {
 			$this->load->library('My_PHPMailer'); 
 			$hoydate = date("Y-m-d H:i:s");
 			date_default_timezone_set('UTC');
-			define('SMTP_HOST','mail.villasalud.pe');
+			define('SMTP_HOST','mail.confiaf.com');
 
 			define('SMTP_PORT',25);
-			define('SMTP_USERNAME','notificaciones@villasalud.pe');
+			define('SMTP_USERNAME','notificaciones@confiaf.com');
 			define('SMTP_PASSWORD','franzsheskoli');
 			$setFromAleas = $this->sessionHospital['nombres'].' '.$this->sessionHospital['apellido_paterno'].' '.$this->sessionHospital['apellido_materno'];
 			$mail = new PHPMailer();
@@ -378,7 +378,7 @@ class HistorialCajaChica extends CI_Controller {
 				</head>
 				<body style="font-family: sans-serif;padding: 10px 40px;" > 
 				<div style="text-align: right;">
-					<img style="width: 160px;" alt="Hospital Villa Salud" src="'.base_url('assets/img/dinamic/empresa/'.$arrConfig['nombre_logo']).'">
+					<img style="width: 160px;" alt="CONFIAF" src="'.base_url('assets/img/dinamic/empresa/'.$arrConfig['nombre_logo']).'">
 				</div> <br />';
 			$cuerpo .= '<h2> CONTROL DE MOVIMIENTOS DE CAJA CHICA </h2> <br />'; 
 			$cuerpo .= '<div style="font-size:16px;">  

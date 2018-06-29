@@ -37,7 +37,7 @@
 		</div>
 		<div class="col-xs-12">
 			<table class="table table-bordered m-n" cellspacing="0">
-				<thead style="background-color: #00bcd4; color: white">
+				<thead style="background-color: #00acc1; color: white">
 					<tr>
 						<th>Cuenta Contable</th>
 						<th>Debe</th>

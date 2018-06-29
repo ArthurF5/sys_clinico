@@ -1,5 +1,5 @@
 <div class="container" id="login-form" ng-controller="loginController">
-    <a href="" class="login-logo"><img style="max-width: 365px; width: 100%;" class="img-responsive center-block" masked-image ng-src="{{ dirImages + 'dinamic/empresa/' + $parent.fEmpresa.nombre_logo }} "></a>
+    <a href="http://www.confiaf.com" class="login-logo"><img style="max-width: 180px; width: 100%;" class="img-responsive center-block" masked-image ng-src="{{ dirImages + 'dinamic/empresa/' + $parent.fEmpresa.nombre_logo }} "></a>
         <div class="row">
             <div class="col-md-4 col-md-offset-4"> 
                 <div class="panel panel-default">
@@ -56,8 +56,8 @@
                             <!-- </div> -->
                             <div class="form-group mb-n">
                                 <div class="col-xs-12">
-                                    <a href="extras-forgotpassword.html" class="pull-left">¿Olvidó su contraseña?</a>
-                                    <!-- <div class="checkbox-inline icheck pull-right p-n">
+                                    <!--<a href="extras-forgotpassword.html" class="pull-left">¿Olvidó su contraseña?</a>
+                                     <div class="checkbox-inline icheck pull-right p-n">
                                         <label for="">
                                             <input icheck type="checkbox"></input>
                                             Remember me
@@ -69,7 +69,6 @@
                     </div>
                     <div class="panel-footer">
                         <div class="clearfix">
-                            <!-- <a href="#/extras-registration" class="btn btn-default pull-left">Register</a> -->
                             <a href="" class="btn btn-primary pull-right" ng-click="btnLoginToSystem()">Iniciar sesión</a>
                         </div>
                     </div>

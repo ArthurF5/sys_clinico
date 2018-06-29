@@ -122,8 +122,8 @@ function enviar_mail_paciente($tipo, $citaPaciente){
   $ci2->load->library('My_PHPMailer');
   $hoydate = date("Y-m-d H:i:s");
   date_default_timezone_set('UTC');
-  define('SMTP_HOST','mail.villasalud.pe');
-  $correo = 'sistemas.ti@villasalud.pe';
+  define('SMTP_HOST','mail.confiaf.com');
+  $correo = 'sistemas.ti@confiaf.com';
   $pass = 'franzsheskoli';
   $setFromAleas = 'Dirección Médica';
 
@@ -143,7 +143,7 @@ function enviar_mail_paciente($tipo, $citaPaciente){
   $mail->SetFrom(SMTP_USERNAME,$setFromAleas);
   $mail->AddReplyTo(SMTP_USERNAME,$setFromAleas);
 
-  $mail->Subject = 'NOTIFICACIÓN HOSPITAL VILLA SALUD';
+  $mail->Subject = 'NOTIFICACIÓN CONFIAF';
 
   $cuerpo = '<html> 
       <head>
@@ -151,7 +151,7 @@ function enviar_mail_paciente($tipo, $citaPaciente){
       </head>
       <body style="font-family: sans-serif;padding: 10px 40px;" > 
       <div style="text-align: right;">
-        <img style="width: 160px;" alt="Hospital Villa Salud" src="'.base_url('assets/img/dinamic/empresa/gm_small.png').'">
+        <img style="width: 160px;" alt="Confiaf" src="'.base_url('assets/img/dinamic/empresa/gm_small.png').'">
         </div> <br />';
   $cuerpo .= '<div style="font-size:16px;">  
           Estimado(a) paciente: '. $citaPaciente['paciente'].' <br /> <br /> ';
@@ -177,8 +177,8 @@ function enviar_mail_paciente($tipo, $citaPaciente){
   $mail->MsgHTML($cuerpo);
   $correoPaciente = $citaPaciente['email']; 
   $mail->CharSet = 'UTF-8';
-  //$mail->AddBCC("ymartinez@villasalud.pe");
-  //$mail->AddBCC("rluna@villasalud.pe");
+  //$mail->AddBCC("ymartinez@confiaf.com");
+  //$mail->AddBCC("rluna@confiaf.com");
 
   if($correoPaciente != null && $correoPaciente != ''){
     if(comprobar_email($correoPaciente)){

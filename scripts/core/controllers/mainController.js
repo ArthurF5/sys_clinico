@@ -418,7 +418,7 @@ appRoot = angular.module('theme.core.main_controller', ['theme.core.services', '
     $scope.getNotificacionesColegiatura = function () {
       $scope.fSessionCI.listaNotificacionesColegiatura = {};   
       rootServices.sListarNotificacionesColegiatura().then(function (rpta) {
-        console.log(rpta);
+        //console.log(rpta);
         $scope.fSessionCI.listaNotificacionesColegiatura.datos = rpta.datos;
         $scope.fSessionCI.listaNotificacionesColegiatura.contador = rpta.contador;
 

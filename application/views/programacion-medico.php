@@ -111,7 +111,7 @@
                        <!-- Btn Filtrar por Tipo Atención -->
                       <div class="form-group mb-md col-md-10 col-sm-12 mb-n pl-n" >
                         <div class="checkbox icheck m-n inline">
-                          <label> <span style="padding:2px 16px; background:#00bcd4; color: white"> CONSULTAS </span>
+                          <label> <span style="padding:2px 16px; background:#00acc1; color: white"> CONSULTAS </span>
                             <input icheck="square-blue" type="checkbox" ng-init='fBusqueda.consultas = true' ng-model="fBusqueda.consultas" ng-change="filtrarConsProc(fBusqueda.consultas, 'CM')">
                           </label>
                         </div>

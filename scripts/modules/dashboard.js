@@ -263,7 +263,7 @@ angular.module('theme.demos.dashboard', [
         xaxis: {
             show: false
         },
-        colors: ['#00bcd4'],
+        colors: ['#00acc1'],
         tooltip: true,
         tooltipOpts: {
             content: "Active User: %y"

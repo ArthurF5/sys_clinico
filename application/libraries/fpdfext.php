@@ -594,7 +594,7 @@
           $this->SetFont('Arial','B',10); 
           $this->Cell(30,6,'PROCEDENCIA: ','LB','','',1); 
           $this->SetFont('Arial','',10); 
-          $this->Cell(100,6,'HOSPITAL VILLA SALUD','B','','',1); 
+          $this->Cell(100,6,'CONFIAF','B','','',1); 
           $this->SetFont('Arial','B',10); 
           $this->Cell(18,6,utf8_decode('F. IMP.:'),'B','','',1);
           $this->SetFont('Arial','',10); 
@@ -904,7 +904,7 @@
           $ci2 =& get_instance(); 
           $this->SetFont('Arial','',6);
           $this->SetXY(-70,0);
-          $this->Image($this->getImagenCab(),6,2,50); 
+          $this->Image($this->getImagenCab(),6,2,13); 
           $varXPositionNE = 20;
           $varXPositionDIR = 16;
           $this->SetFont('Arial','',6);
@@ -930,9 +930,9 @@
           }
           
           $this->SetXY(151,$i); $i+=3;
-          $this->Cell(50,4,utf8_decode('Central Telefónica: 399 14 14'),0,0,'R' );
+          $this->Cell(50,4,utf8_decode('Central Telefónica: +51 955537731'),0,0,'R' );
           $this->SetXY(151,$i);
-          $this->Cell(50,4,utf8_decode('www.villasalud.pe'),0,0,'R' );
+          $this->Cell(50,4,utf8_decode('www.confiaf.com'),0,0,'R' );
           
           $this->Ln(13);
         }

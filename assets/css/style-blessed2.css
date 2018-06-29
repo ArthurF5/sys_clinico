@@ -4493,7 +4493,7 @@ body.topnav-collapsed header.navbar.navbar-default .navbar-collapse .open .tt-dr
   background-color: #71a436;
 }
 .badge-info {
-  background-color: #00bcd4;
+  background-color: #00acc1;
 }
 .badge-info[href]:hover,
 .badge-info[href]:focus {
@@ -4507,7 +4507,7 @@ body.topnav-collapsed header.navbar.navbar-default .navbar-collapse .open .tt-dr
   background-color: #d39e00;
 }
 .badge-danger {
-  background-color: #e51c23;
+  background-color: #3b5998;
 }
 .badge-danger[href]:hover,
 .badge-danger[href]:focus {
@@ -4591,7 +4591,7 @@ body.topnav-collapsed header.navbar.navbar-default .navbar-collapse .open .tt-dr
   background-color: #71a436;
 }
 .sidebar nav.widget-body > ul.acc-menu .badge.badge-info {
-  background-color: #00bcd4;
+  background-color: #00acc1;
 }
 .sidebar nav.widget-body > ul.acc-menu .badge.badge-info[href]:hover,
 .sidebar nav.widget-body > ul.acc-menu .badge.badge-info[href]:focus {
@@ -4605,7 +4605,7 @@ body.topnav-collapsed header.navbar.navbar-default .navbar-collapse .open .tt-dr
   background-color: #d39e00;
 }
 .sidebar nav.widget-body > ul.acc-menu .badge.badge-danger {
-  background-color: #e51c23;
+  background-color: #3b5998;
 }
 .sidebar nav.widget-body > ul.acc-menu .badge.badge-danger[href]:hover,
 .sidebar nav.widget-body > ul.acc-menu .badge.badge-danger[href]:focus {

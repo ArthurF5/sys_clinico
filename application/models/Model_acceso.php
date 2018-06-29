@@ -121,7 +121,7 @@ class Model_acceso extends CI_Model {
 			es.idespecialidad, es.nombre AS especialidad, te.descripcion AS tipoEspecialidad, ca.agrega_horario_especial, 
 			em.idempleado, em.nombre_foto, em.nombres, em.apellido_paterno, em.apellido_materno, em.idcargo, em.idcargosuperior, 
 			med.idmedico, med_nombres, med_apellido_paterno, med_apellido_materno, med.colegiatura_profesional, eme.idempresamedico, 
-			ead.isea AS idsedeempresaadmin, ead.idsede, ead.aleas_empresa AS sede',FALSE);
+			ead.isea AS idsedeempresaadmin, ead.idsede, ead.aleas_empresa AS sede, ead.nombre_logo',FALSE);
 		$this->db->select('em.idcentrocosto');
 		$this->db->from('users u');
 		$this->db->join('rh_empleado em','u.idusers = em.iduser');

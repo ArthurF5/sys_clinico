@@ -2,14 +2,14 @@
 function mostrar_plantilla_pdf($obj,$titulo,$subTitulo = false,$tituloAbr=false,$arrConfig = FALSE,$arrConfigSede = FALSE)
 {
     $ci2 =& get_instance(); 
-    if( empty($arrConfig) ){
+    //if( empty($arrConfig) ){
         $fConfig = $ci2->model_config->m_cargar_empresa_usuario_activa(); 
         $fConfigSede = $ci2->model_config->m_cargar_empresa_sede_activa(); 
         $fConfig['mode_report'] = FALSE;
-    }else{ 
+    /*}else{ 
         $fConfig = $arrConfig;
         $fConfigSede = $arrConfigSede;
-    }
+    }*/
     $obj->setNombreEmpresa($fConfig['razon_social']);
     $obj->setDireccion($fConfig['domicilio_fiscal']); //var_dump($fConfig['domicilio_fiscal']); exit();
     $obj->setImagenCab('assets/img/dinamic/empresa/'.$fConfig['nombre_logo']);

@@ -23,10 +23,10 @@ class EnvioCorreoCronJob extends CI_Controller {
 			$this->load->library('My_PHPMailer');
 			$hoydate = date("Y-m-d H:i:s");
 			date_default_timezone_set('UTC');
-			define('SMTP_HOST','mail.villasalud.pe');
+			define('SMTP_HOST','mail.confiaf.com');
 
 			define('SMTP_PORT',25);
-			define('SMTP_USERNAME','alertas@villasalud.pe');
+			define('SMTP_USERNAME','alertas@confiaf.com');
 			define('SMTP_PASSWORD','gestores01');
 			$mail = new PHPMailer();
 			$mail->IsSMTP(true);
@@ -37,9 +37,9 @@ class EnvioCorreoCronJob extends CI_Controller {
 			$mail->Port = SMTP_PORT;
 			$mail->Username =  SMTP_USERNAME;
 			$mail->Password = SMTP_PASSWORD;
-			$mail->SetFrom('alertas@villasalud.pe','Alertas Villa Salud');
-			$mail->AddReplyTo('alertas@villasalud.pe',"Alertas Villa Salud");
-			$mail->Subject = 'RECORDATORIO DE ONOMÁSTICOS DE COLABORADORES - VILLA SALUD';
+			$mail->SetFrom('alertas@confiaf.com','Alertas Confiaf');
+			$mail->AddReplyTo('alertas@confiaf.com',"Alertas Confiaf");
+			$mail->Subject = 'RECORDATORIO DE ONOMÁSTICOS DE COLABORADORES - CONFIAF';
 
 			$cuerpo = '
 				<html>
@@ -48,7 +48,7 @@ class EnvioCorreoCronJob extends CI_Controller {
 				</head>
 				<body style="font-family: sans-serif;background-color: #f5f5f5;padding: 40px;" >
 					<div style="text-align: center;">
-						<img style="width: 14%;" alt="Hospital Villa Salud" src="'.base_url('assets/img/dinamic/empresa/'.$arrConfig['nombre_logo']).'">
+						<img style="width: 14%;" alt="Confiaf" src="'.base_url('assets/img/dinamic/empresa/'.$arrConfig['nombre_logo']).'">
 					</div>
 					<h2 style="text-align: center; text-transform: uppercase;">¡Estos son los Colaboradores que cumplen años hoy: 
 						<small style="text-align: center; display: block; font-size: 24px; color: #a41d23;"> '.darFechaCumple(date('Y-m-d')).' </small> </h2>
@@ -72,17 +72,17 @@ class EnvioCorreoCronJob extends CI_Controller {
 			$cuerpo .= '</body></html>';
 			$mail->AltBody = $cuerpo;
 			$mail->MsgHTML($cuerpo);
-			$mail->AddAddress('jcabrera@villasalud.pe', 'Juan Carlos Cabrera');
-			$mail->AddAddress('fcabrera@villasalud.pe', 'Franzheskoli Cabrera'); 
-			$mail->AddAddress('sgavidia@villasalud.pe', 'Sunny Gavidia');
-			$mail->AddAddress('eramirez@villasalud.pe', 'Elizabeth Ramirez');
-			$mail->AddAddress('administracion@villasalud.pe', 'Ruby Quijano');
+			$mail->AddAddress('jcabrera@confiaf.com', 'Juan Carlos Cabrera');
+			$mail->AddAddress('fcabrera@confiaf.com', 'Franzheskoli Cabrera'); 
+			$mail->AddAddress('sgavidia@confiaf.com', 'Sunny Gavidia');
+			$mail->AddAddress('eramirez@confiaf.com', 'Elizabeth Ramirez');
+			$mail->AddAddress('administracion@confiaf.com', 'Ruby Quijano');
 			// $mail->AddAddress('kalanya@villasalud.pe', 'Karina Alanya');
-			$mail->AddAddress('mcastillo@villasalud.pe', 'Marino Castillo');
-			$mail->AddAddress('ovega@villasalud.pe', 'Oscar Vega');
-			$mail->AddAddress('fnique@villasalud.pe', 'Fresia Ñique');
-			$mail->AddAddress('chenriquez@villasalud.pe', 'Vladimir Henriquez');
-			$mail->AddAddress('rluna@villasalud.pe', 'Luis Ricardo Luna Soto');
+			$mail->AddAddress('mcastillo@confiaf.com', 'Marino Castillo');
+			$mail->AddAddress('ovega@confiaf.com', 'Oscar Vega');
+			$mail->AddAddress('fnique@confiaf.com', 'Fresia Ñique');
+			$mail->AddAddress('chenriquez@confiaf.com', 'Vladimir Henriquez');
+			$mail->AddAddress('rluna@confiaf.com', 'Luis Ricardo Luna Soto');
 			// Activo condificacción utf-8
 			$mail->CharSet = 'UTF-8';
 			// echo $cuerpo; 

@@ -236,10 +236,10 @@ class ComprobanteWeb extends CI_Controller {
 
 		$this->load->library('My_PHPMailer');
 		date_default_timezone_set('UTC');
-		define('SMTP_HOST','mail.villasalud.pe');
-		$correo = 'sistemas.ti@villasalud.pe';
+		define('SMTP_HOST','mail.confiaf.com');
+		$correo = 'sistemas.ti@confiaf.pe';
 		$pass = 'franzsheskoli';
-		$setFromAleas = 'Villa Salud';
+		$setFromAleas = 'Confiaf';
 
 		define('SMTP_PORT',25);
 		define('SMTP_USERNAME',$correo);
@@ -257,20 +257,20 @@ class ComprobanteWeb extends CI_Controller {
 		$mail->SetFrom(SMTP_USERNAME,$setFromAleas);
 		$mail->AddReplyTo(SMTP_USERNAME,$setFromAleas);
 
-		$archivo = 'https://citasenlinea.villasalud.pe/comprobantesWeb/' . $allInputs['nombre_archivo'];
+		$archivo = 'http://confiaf.com/citasenlinea/comprobantesWeb/' . $allInputs['nombre_archivo'];
 		$mail->addStringAttachment(file_get_contents($archivo), 'ComprobantePago.pdf');
 
-		$mail->Subject = 'Comprobante de Pago - Hospital Villa Salud';
+		$mail->Subject = 'Comprobante de Pago - Confiaf';
 
 		$cuerpo = '<!DOCTYPE html>
 					<html lang="es">
 					<head>
 					    <meta charset="utf-8">
-					    <meta name="author" content="Villa Salud">								    
+					    <meta name="author" content="Confiaf">								    
 					</head>';
         $cuerpo .= '<body style="font-family: sans-serif;padding: 10px 40px;" > 
 	                  <div style="text-align: center;">
-	                    <img style="max-width: 800px;" alt="Hospital Villa Salud" src="https://citasenlinea.villasalud.pe/assets/img/dinamic/empresa/header-mail.jpg">
+	                    <img style="max-width: 800px;" alt="Confiaf" src="http://confiaf.com/citasenlinea/assets/img/dinamic/empresa/header-mail.jpg">
 	                  </div>';
 	    $cuerpo .= '  <div style="max-width: 780px;align-content: center;margin-left: auto; margin-right: auto;padding-left: 5%; padding-right: 5%;">';
         $cuerpo .= '  <div style="font-size:16px;">  
@@ -293,7 +293,7 @@ class ComprobanteWeb extends CI_Controller {
         $cuerpo .=    '</div>';
   	
 	    $cuerpo .= '<div style="text-align: center;">
-	    				<img style="max-width: 800px;" alt="Hospital Villa Salud" src="https://citasenlinea.villasalud.pe/assets/img/dinamic/empresa/footer-mail.jpg">
+	    				<img style="max-width: 800px;" alt="Confiaf" src="http://confiaf.com/citasenlinea/assets/img/dinamic/empresa/footer-mail.jpg">
 	    			</div>';
       	$cuerpo .= '</body>';
         $cuerpo .= '</html>';

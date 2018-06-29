@@ -171,16 +171,16 @@ class Medicamento extends CI_Controller {
 	{
 		$allInputs = json_decode(trim(file_get_contents('php://input')),true); 
 
-		if( @$this->sessionHospital['id_empresa_admin'] == 39 ){
-			$idsede = 1; 
-			$lista = $this->model_medicamento->m_cargar_medicamento_autocomplete_medico($allInputs['searchColumn'],$allInputs['searchText'],$idsede);
-		}
+		//if( @$this->sessionHospital['id_empresa_admin'] == 39 ){
+			//$idsede = 1; 
+			//$lista = $this->model_medicamento->m_cargar_medicamento_autocomplete_medico($allInputs['searchColumn'],$allInputs['searchText'],$idsede);
+		//}
 		$hayStock = true;
 		$arrListado = array();
-		if(empty($lista) &&  @$this->sessionHospital['id_empresa_admin'] == 38 ){ // LURIN 
+		//if(empty($lista) &&  @$this->sessionHospital['id_empresa_admin'] == 38 ){ // LURIN 
 			$hayStock = false;
 			$lista = $this->model_medicamento->m_cargar_solo_medicamento_autocomplete_medico($allInputs['searchColumn'],$allInputs['searchText']);
-		}
+		//}
 		
 		foreach ($lista as $row) {
 			$principios = '';

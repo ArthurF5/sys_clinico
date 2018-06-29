@@ -718,7 +718,7 @@ class Empresa extends CI_Controller {
 
 	public function lista_empresas_admin_cbo(){
 		$allInputs = json_decode(trim(file_get_contents('php://input')),true);
-		// var_dump($this->sessionHospital); exit(); 
+		//print_r($this->sessionHospital); exit(); 
 		$datos = array( 
 			'ruc' => $this->sessionHospital['ruc_empresa_admin']
 		);
