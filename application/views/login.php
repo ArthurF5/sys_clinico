@@ -2,7 +2,7 @@
     <a href="http://www.confiaf.com" class="login-logo"><img style="max-width: 180px; width: 100%;" class="img-responsive center-block" masked-image ng-src="{{ dirImages + 'dinamic/empresa/' + $parent.fEmpresa.nombre_logo }} "></a>
         <div class="row">
             <div class="col-md-4 col-md-offset-4"> 
-                <div class="panel panel-default">
+                <div class="panel panel-default" style="opacity: 0.85;">
                     <div class="panel-heading">
                         <h2>Iniciar sesión </h2>
                     </div>
